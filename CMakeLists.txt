@@ -5,6 +5,11 @@ if (${CMAKE_VERSION} VERSION_GREATER "3.12")
     cmake_policy(SET CMP0074 OLD)
 endif ()
 
+add_library(Boost::lexical_cast INTERFACE IMPORTED)
+add_library(Boost::variant INTERFACE IMPORTED)
+add_library(Boost::algorithm INTERFACE IMPORTED)
+
+
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     set(JINJA2CPP_IS_MAIN_PROJECT TRUE)
 else()
