@@ -6,6 +6,10 @@ endif()
 
 project(Jinja2Cpp VERSION 1.3.2)
 
+add_library(Boost::lexical_cast INTERFACE IMPORTED)
+add_library(Boost::variant INTERFACE IMPORTED)
+add_library(Boost::algorithm INTERFACE IMPORTED)
+
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     set(JINJA2CPP_IS_MAIN_PROJECT TRUE)
 else()
